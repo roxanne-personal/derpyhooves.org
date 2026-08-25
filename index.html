@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equestrian Postal Service | derpyhooves.org</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">Equestrian Postal Service</div>
+    <nav class="site-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="recipes.html">Muffin Exchange</a>
+      <button id="derp-toggle" aria-label="Toggle Derp Mode">👀 Derp Mode</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Delivering Care (Eventually)</h1>
+      <p>Welcome to the official Equestrian Postal Service dispatch node. Fast, friendly, and mostly on target.</p>
+    </section>
+
+    <section class="tracker-card">
+      <h2>EPS Package Tracker</h2>
+      <p>Enter your 6-digit tracking code below to check parcel status.</p>
+      
+      <form id="tracker-form" class="tracker-form">
+        <input type="text" id="tracking-number" placeholder="e.g. EPS-88231" required>
+        <button type="submit" class="btn">Track Parcel</button>
+      </form>
+
+      <div id="tracker-output" class="tracker-output hidden">
+        <div class="status-header">
+          <strong>Tracking ID:</strong> <span id="display-id"></span>
+        </div>
+        <ul id="status-logs" class="status-logs"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; Equestrian Postal Service. "I just don't know what went wrong!"</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
