@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       selectedStatuses.forEach((status, index) => {
         const li = document.createElement("li");
-        li.textContent = `[Step ${index + 1}]: ${status}`;
+        li.textContent = `[Update ${index + 1}]: ${status}`;
         statusLogs.appendChild(li);
       });
 
