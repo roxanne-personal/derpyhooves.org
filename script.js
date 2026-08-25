@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Derp Mode Toggle
-  const derpToggle = document.getElementById("derp-toggle");
+  // 1. Derpy Mode Toggle
+  const derpyToggle = document.getElementById("derpy-toggle");
   
-  if (localStorage.getItem("derpMode") === "enabled") {
-    document.body.classList.add("derp-mode");
+  if (localStorage.getItem("derpyMode") === "enabled") {
+    document.body.classList.add("derpy-mode");
   }
 
-  if (derpToggle) {
-    derpToggle.addEventListener("click", () => {
-      document.body.classList.toggle("derp-mode");
-      const isEnabled = document.body.classList.contains("derp-mode");
-      localStorage.setItem("derpMode", isEnabled ? "enabled" : "disabled");
+  if (derpyToggle) {
+    derpyToggle.addEventListener("click", () => {
+      document.body.classList.toggle("derpy-mode");
+      const isEnabled = document.body.classList.contains("derpy-mode");
+      localStorage.setItem("derpyMode", isEnabled ? "enabled" : "disabled");
     });
   }
 
