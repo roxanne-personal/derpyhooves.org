@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
       displayId.textContent = trackingInput.toUpperCase();
       statusLogs.innerHTML = "";
 
-      // Generate 3 random status steps
       const shuffled = [...statusPool].sort(() => 0.5 - Math.random());
       const selectedStatuses = shuffled.slice(0, 3);
 
@@ -72,7 +71,50 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 4. 404 Bubble Pop Minigame
+  // 4. Recipe Submission Modal Logic
+  const submitModal = document.getElementById("submit-modal");
+  const openModalBtn = document.getElementById("open-submit-modal");
+  const closeModalBtn = document.getElementById("close-modal");
+
+  if (submitModal && openModalBtn && closeModalBtn) {
+    openModalBtn.addEventListener("click", () => submitModal.classList.remove("hidden"));
+    closeModalBtn.addEventListener("click", () => submitModal.classList.add("hidden"));
+    
+    window.addEventListener("click", (e) => {
+      if (e.target === submitModal) submitModal.classList.add("hidden");
+    });
+  }
+
+  // 5. Interactive Recipe Voting (Local State Storage)
+  const voteButtons = document.querySelectorAll(".vote-btn");
+
+  voteButtons.forEach((btn) => {
+    const recipeId = btn.dataset.id;
+    const countSpan = btn.querySelector(".vote-count");
+    
+    const hasVoted = localStorage.getItem(`voted_${recipeId}`);
+    if (hasVoted) {
+      btn.classList.add("voted");
+    }
+
+    btn.addEventListener("click", () => {
+      let currentVotes = parseInt(countSpan.textContent, 10);
+
+      if (btn.classList.contains("voted")) {
+        currentVotes--;
+        btn.classList.remove("voted");
+        localStorage.removeItem(`voted_${recipeId}`);
+      } else {
+        currentVotes++;
+        btn.classList.add("voted");
+        localStorage.setItem(`voted_${recipeId}`, "true");
+      }
+
+      countSpan.textContent = currentVotes;
+    });
+  });
+
+  // 6. 404 Bubble Pop Minigame
   const bubbleArea = document.getElementById("bubble-area");
   if (bubbleArea) {
     let poppedCount = 0;
@@ -82,7 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const bubble = document.createElement("div");
       bubble.classList.add("bubble");
       
-      // Random placement within container
       const top = Math.random() * 120 + 10;
       const left = Math.random() * 80 + 10;
       bubble.style.top = `${top}px`;
