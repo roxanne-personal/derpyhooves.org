@@ -29,7 +29,6 @@
       <input type="text" id="recipe-search" placeholder="Search ingredients (e.g. blueberry, cinnamon)...">
     </div>
 
-    <!-- Recipe Cards with Upvoting -->
     <section class="recipe-grid" id="recipe-grid">
       <article class="recipe-card" data-id="blueberry-cloud" data-tags="blueberry fruit breakfast">
         <h3>Classic Blueberry Cloud</h3>
@@ -46,19 +45,32 @@
           <button class="vote-btn" data-id="bran-special">👀 <span class="vote-count">18</span></button>
         </div>
       </article>
+
+      <article class="recipe-card" data-id="double-fudge" data-tags="chocolate fudge sweet">
+        <h3>Double Fudge Crunch</h3>
+        <p>Rich cocoa batter packed with dark chocolate chunks. Handle with extreme care.</p>
+        <div class="rating-container">
+          <button class="vote-btn" data-id="double-fudge">👀 <span class="vote-count">35</span></button>
+        </div>
+      </article>
+
+      <article class="recipe-card" data-id="apple-cinnamon" data-tags="apple cinnamon sweet">
+        <h3>Sweet Apple Acres Cinnamon</h3>
+        <p>Fresh local apples baked with a thick layer of brown sugar and cinnamon crumble.</p>
+        <div class="rating-container">
+          <button class="vote-btn" data-id="apple-cinnamon">👀 <span class="vote-count">29</span></button>
+        </div>
+      </article>
     </section>
   </main>
 
-  <!-- Recipe Submission Modal -->
   <div id="submit-modal" class="modal hidden">
     <div class="modal-content">
       <span id="close-modal" class="close">&times;</span>
       <h2>Submit Your Recipe</h2>
       <p>Submissions will be reviewed by the Postal Inspector before appearing live.</p>
 
-      <!-- Replace YOUR_EMAIL with your actual email address via FormSubmit -->
       <form id="recipe-submit-form" action="https://formsubmit.co/YOUR_EMAIL" method="POST">
-        <!-- Disables captcha for smoother user experience -->
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_subject" value="New Muffin Recipe Submission!">
 
@@ -71,7 +83,7 @@
         <label for="recipe-description">Description & Ingredients</label>
         <textarea id="recipe-description" name="Description" rows="4" required placeholder="List ingredients and baking steps..."></textarea>
 
-        <button type="submit" class="btn">Send for Review</button>
+        <button type="submit" class="btn modal-submit-btn">Send for Review</button>
       </form>
     </div>
   </div>
