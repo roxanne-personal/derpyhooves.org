@@ -24,7 +24,33 @@ document.addEventListener("DOMContentLoaded", () => {
       "Stuck behind a secureblue firewall.",
       "Temporarily misplaced in a cloud factory.",
       "Currently orbiting the moon. Re-entry scheduled shortly.",
-      "Slightly squished, but delivered with care to porch."
+      "Slightly squished, but delivered with care to... somebody's porch."
+      "Held at Canterlot Customs pending Princess Celestia's personal approval."
+      "Accidentally sorted into an apple barrel at Sweet Apple Acres."
+      "Currently serving as a pillow for a sleeping dragon in the Badlands."
+      "Frozen in a block of enchanted ice at the Crystal Empire sorting hub."
+      "Courier took a wrong turn in the Everfree Forest. Search party dispatched."
+      "Rerouted due to severe atmospheric turbulence from a Sonic Rainboom."
+      "Temporarily trapped inside a lightning cloud manufactured at the Weather Factory."
+      "Stuck in a storm cloud. A pegasus is currently kicking it loose."
+      "Delivery pony got distracted by a flock of cute butterflies."
+      "Package temporarily transformed into a teacup. Waiting for Discord's magic to wear off."
+      "Delivered three days ago thanks to an unauthorized chronal portal."
+      "Trampled by a migrating herd of Yaks. Box flattened, contents fine!"
+      "Accidentally dropped into Tartarus. Cerberus is currently sniffing it."
+      "Package marked 'Fragile'. Pinkie Pie is currently bouncing it across Equestria."
+      "Delayed in Manehattan traffic behind an overly dramatic carriage."
+      "Intercepted by Parasprites. Package density reduced by 40%."
+      "Rerouted: Courier pony got lost in the underground Crystal Catacombs."
+      "Stationed at Fillydelphia Distribution Center due to an unannounced parade."
+      "Held at Canterlot Castle for mandatory royal glitter inspection."
+      "Mistaken for library inventory; Twilight Sparkle is currently cross-referencing it."
+      "Princess Luna redirected the flight path to avoid a drifting night terror."
+      "Dispatched via dragon fire. Mind the minor singe marks."
+      "Package caught in a localized spell loop. Scheduled to arrive yesterday."
+      "Courier accidentally ate the shipping label thinking it was a dried apple slice."
+      "Parcel clipped through the floor of the Cloudsdale post office. Re-spawning momentarily."
+      "Temporarily impounded by the Wonderbolts for breaking the aerial speed limit."
     ];
 
     trackerForm.addEventListener("submit", (e) => {
