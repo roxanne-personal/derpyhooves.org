@@ -278,9 +278,9 @@ body {
 }
 
 /* Derp Mode Styling */
-body.derp-mode .site-header { transform: rotate(-0.5deg); }
-body.derp-mode .hero, body.derp-mode .hero-actions { transform: rotate(0.8deg); }
-body.derp-mode .tracker-card { transform: rotate(-1.2deg); }
-body.derp-mode .recipe-card:nth-child(odd) { transform: rotate(1.5deg); }
-body.derp-mode .recipe-card:nth-child(even) { transform: rotate(-1.5deg); }
-body.derp-mode .btn { transform: rotate(2deg); }
+body.derpy-mode .site-header { transform: rotate(-0.5deg); }
+body.derpy-mode .hero, body.derpy-mode .hero-actions { transform: rotate(0.8deg); }
+body.derpy-mode .tracker-card { transform: rotate(-1.2deg); }
+body.derpy-mode .recipe-card:nth-child(odd) { transform: rotate(1.5deg); }
+body.derpy-mode .recipe-card:nth-child(even) { transform: rotate(-1.5deg); }
+body.derpy-mode .btn { transform: rotate(2deg); }
