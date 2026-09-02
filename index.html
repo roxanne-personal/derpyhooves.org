@@ -24,12 +24,13 @@
 
     <section class="tracker-card">
       <h2>EPS Package Tracker</h2>
-      <p>Enter your 6-digit tracking code below to check parcel status.</p>
+      <p>Enter your tracking code in format EPS-12345 (3 letters, hyphen, 5 digits).</p>
       
       <form id="tracker-form" class="tracker-form">
-        <input type="text" id="tracking-number" placeholder="e.g. EPS-88231" required>
+        <input type="text" id="tracking-number" placeholder="e.g. EPS-12345" required>
         <button type="submit" class="btn">Track Parcel</button>
       </form>
+      <div id="tracker-error" class="tracker-error hidden"></div>
 
       <div id="tracker-output" class="tracker-output hidden">
         <div class="status-header">

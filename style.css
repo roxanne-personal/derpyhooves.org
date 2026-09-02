@@ -133,6 +133,16 @@ body {
   background: var(--primary-hover);
 }
 
+/* Tracker Error Message */
+.tracker-error {
+  color: #e74c3c;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: #fadbd8;
+  border-radius: var(--radius);
+}
+
 /* Tracker Output */
 .tracker-output {
   margin-top: 1.5rem;

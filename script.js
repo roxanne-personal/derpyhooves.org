@@ -56,6 +56,19 @@ document.addEventListener("DOMContentLoaded", () => {
     trackerForm.addEventListener("submit", (e) => {
       e.preventDefault();
       const trackingInput = document.getElementById("tracking-number").value.trim();
+      const errorDiv = document.getElementById("tracker-error");
+      
+      // Validate format: EPS-12345 (3 letters, hyphen, 5 digits)
+      const validFormat = /^[A-Z]{3}-\d{5}$/;
+      
+      if (!validFormat.test(trackingInput)) {
+        errorDiv.textContent = "Invalid format! Use EPS-12345 (3 letters, hyphen, 5 digits).";
+        errorDiv.classList.remove("hidden");
+        return;
+      }
+      
+      errorDiv.classList.add("hidden");
+      
       const outputDiv = document.getElementById("tracker-output");
       const displayId = document.getElementById("display-id");
       const statusLogs = document.getElementById("status-logs");
