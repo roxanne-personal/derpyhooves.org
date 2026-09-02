@@ -5,6 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Derpy Hooves | Equestrian Postal Service</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .gallery-item {
+      background: var(--card-bg);
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-image {
+      width: 100%;
+      height: 300px;
+      background-color: #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: #bbb;
+      overflow: hidden;
+    }
+
+    .gallery-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-caption {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .gallery-caption h3 {
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    .gallery-caption p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -16,14 +70,85 @@
     </nav>
   </header>
 
-  <main class="container text-center">
-    <section class="tracker-card">
+  <main class="container">
+    <section class="tracker-card text-center">
       <h1>🐴 Derpy Hooves 🐴</h1>
       <p>The beloved mail carrier of Equestria!</p>
-      <div style="margin: 2rem 0; font-size: 4rem;">
-        🐴✉️💌
-      </div>
       <p><em>"Anything is possible when you have mail and determination!"</em></p>
+    </section>
+
+    <section class="tracker-card">
+      <h2>Photo Gallery</h2>
+      <div class="gallery">
+        <!-- Photo 1 -->
+        <div class="gallery-item">
+          <div class="gallery-image">
+            <img src="derpy-photo-1.jpg" alt="Derpy Hooves Photo 1">
+          </div>
+          <div class="gallery-caption">
+            <h3>Photo 1</h3>
+            <p>Replace derpy-photo-1.jpg with your image</p>
+          </div>
+        </div>
+
+        <!-- Photo 2 -->
+        <div class="gallery-item">
+          <div class="gallery-image">
+            <img src="derpy-photo-2.jpg" alt="Derpy Hooves Photo 2">
+          </div>
+          <div class="gallery-caption">
+            <h3>Photo 2</h3>
+            <p>Replace derpy-photo-2.jpg with your image</p>
+          </div>
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="gallery-item">
+          <div class="gallery-image">
+            <img src="derpy-photo-3.jpg" alt="Derpy Hooves Photo 3">
+          </div>
+          <div class="gallery-caption">
+            <h3>Photo 3</h3>
+            <p>Replace derpy-photo-3.jpg with your image</p>
+          </div>
+        </div>
+
+        <!-- Photo 4 -->
+        <div class="gallery-item">
+          <div class="gallery-image">
+            <img src="derpy-photo-4.jpg" alt="Derpy Hooves Photo 4">
+          </div>
+          <div class="gallery-caption">
+            <h3>Photo 4</h3>
+            <p>Replace derpy-photo-4.jpg with your image</p>
+          </div>
+        </div>
+
+        <!-- Photo 5 -->
+        <div class="gallery-item">
+          <div class="gallery-image">
+            <img src="derpy-photo-5.jpg" alt="Derpy Hooves Photo 5">
+          </div>
+          <div class="gallery-caption">
+            <h3>Photo 5</h3>
+            <p>Replace derpy-photo-5.jpg with your image</p>
+          </div>
+        </div>
+
+        <!-- Photo 6 -->
+        <div class="gallery-item">
+          <div class="gallery-image">
+            <img src="derpy-photo-6.jpg" alt="Derpy Hooves Photo 6">
+          </div>
+          <div class="gallery-caption">
+            <h3>Photo 6</h3>
+            <p>Replace derpy-photo-6.jpg with your image</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tracker-card text-center">
       <a href="index.html" class="btn">Back to Home</a>
     </section>
   </main>
