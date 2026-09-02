@@ -53,12 +53,24 @@ document.addEventListener("DOMContentLoaded", () => {
       "Temporarily impounded by the Wonderbolts for breaking the aerial speed limit.",
     ];
 
+    // Define hidden secret codes
+    const secretCodes = {
+      "DRP-12345": "about.html",
+      "DRP-99999": "derpy.html"
+    };
+
     trackerForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      const trackingInput = document.getElementById("tracking-number").value.trim();
+      const trackingInput = document.getElementById("tracking-number").value.trim().toUpperCase();
       const errorDiv = document.getElementById("tracker-error");
       
-      // Validate format: EPS-12345 (3 letters, hyphen, 5 digits)
+      // Check if it's a secret code
+      if (secretCodes[trackingInput]) {
+        window.location.href = secretCodes[trackingInput];
+        return;
+      }
+      
+      // Validate format: XXX-12345 (3 letters, hyphen, 5 digits)
       const validFormat = /^[A-Z]{3}-\d{5}$/;
       
       if (!validFormat.test(trackingInput)) {
@@ -73,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const displayId = document.getElementById("display-id");
       const statusLogs = document.getElementById("status-logs");
 
-      displayId.textContent = trackingInput.toUpperCase();
+      displayId.textContent = trackingInput;
       statusLogs.innerHTML = "";
 
       const shuffled = [...statusPool].sort(() => 0.5 - Math.random());
