@@ -287,6 +287,18 @@ body {
   background: var(--card-bg);
 }
 
+.footer-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 1rem;
+}
+
+.footer-link:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
 /* Derp Mode Styling */
 body.derpy-mode .site-header { transform: rotate(-0.5deg); }
 body.derpy-mode .hero, body.derpy-mode .hero-actions { transform: rotate(0.8deg); }
