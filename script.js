@@ -64,8 +64,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const trackingInput = document.getElementById("tracking-number").value.trim().toUpperCase();
       const errorDiv = document.getElementById("tracker-error");
       
+      console.log("Tracking input:", trackingInput); // Debug
+      console.log("Is secret code?", secretCodes[trackingInput]); // Debug
+      
       // Check if it's a secret code
       if (secretCodes[trackingInput]) {
+        console.log("Redirecting to:", secretCodes[trackingInput]); // Debug
         window.location.href = secretCodes[trackingInput];
         return;
       }
