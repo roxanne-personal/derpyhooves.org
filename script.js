@@ -55,8 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Define hidden secret codes
     const secretCodes = {
-      "DRP-12345": "about.html",
-      "DRP-99999": "derpy.html"
+      "DRP-73821": "about.html",
+      "DRP-61823": "derpy.html",
+      "HLP-40004": "404.html"
     };
 
     trackerForm.addEventListener("submit", (e) => {
